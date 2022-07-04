@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "husky install",
+    "pre-commit": "lint-staged",
+    "test": "jest",
+      "test:watch": "jest --watch",
+      "test:coverage": "jest --coverage",
+      "test:staged": "jest --staged"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^28.1.4",
     "@types/node": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "eslint": "^7.32.0",
@@ -18,6 +24,11 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
     "git-commit-msg-linter": "^4.1.3",
+    "husky": "^8.0.1",
+    "jest": "^28.1.2",
+    "lint-staged": "^13.0.3",
+    "ts-jest": "^28.0.5",
+    "ts-node": "^10.8.2",
     "typescript": "^4.7.4"
   }
 }
