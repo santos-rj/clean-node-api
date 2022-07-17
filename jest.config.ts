@@ -1,6 +1,6 @@
 export default {
   clearMocks: true,
-  collectCoverage: true,
+  collectCoverage: false,
   roots: [
     '<rootDir>/src'
   ],
@@ -10,5 +10,6 @@ export default {
   testEnvironment: 'node',
   transform: {
     '.+\\.ts$': 'ts-jest'
-  }
+  },
+  testMatch: ['**/*.spec.ts']
 }
