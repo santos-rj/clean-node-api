@@ -6,10 +6,13 @@
   "scripts": {
     "prepare": "husky install",
     "pre-commit": "lint-staged",
-    "test": "jest --passWithNoTests",
-      "test:watch": "jest --watch --passWithNoTests",
-      "test:coverage": "jest --coverage --passWithNoTests",
-      "test:staged": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
+      "test:unit": "npm test -- --watch -c jest-unit.config.ts",
+      "test:integration": "npm test -- --watch -c jest-integration.config.ts",
+      "test:watch": "npm test -- --watch",
+      "test:verbose": "jest --passWithNoTests",
+      "test:staged": "npm test -- --findRelatedTests",
+      "test:ci": "npm test -- --coverage"
   },
   "keywords": [],
   "author": "",
